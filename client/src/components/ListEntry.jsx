@@ -16,10 +16,13 @@ export default class ListEntry extends React.Component {
   }
 
   render() {
-    console.log("img", this.props);
     return (
-      <div>
-        <img src={this.state.img} height="40" width="40" />
+      <div className="individualPic">
+        <img className="img" src={this.state.img}/>
+        <p className="location">{this.state.house_type} · {this.state.location}</p>
+        <p className="description">{this.state.description}</p>
+        <p className="price">${this.state.cost_per_night} per night</p>
+        <p className="votes">{this.state.votes}</p>
       </div>
     )
   }

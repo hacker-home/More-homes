@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App.jsx';
+import MoreHomes from './components/MoreHomes.jsx';
+import styles from '../../public/dist/main.css';
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<MoreHomes />, document.getElementById('app'));
+//add id, type of house, location, price?
