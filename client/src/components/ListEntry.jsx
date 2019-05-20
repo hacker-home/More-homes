@@ -1,4 +1,5 @@
 import React from 'react';
+import StarRating from './StarRating';
 
 export default class ListEntry extends React.Component {
   constructor(props) {
@@ -22,7 +23,8 @@ export default class ListEntry extends React.Component {
         <p className="location">{this.state.house_type} · {this.state.location}</p>
         <p className="description">{this.state.description}</p>
         <p className="price">${this.state.cost_per_night} per night</p>
-        <p className="votes">{this.state.votes}</p>
+        <StarRating rating={this.state.rating} />
+        <span className="votes">{this.state.votes}</span>
       </div>
     )
   }

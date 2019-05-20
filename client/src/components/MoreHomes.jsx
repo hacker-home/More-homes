@@ -35,6 +35,9 @@ class MoreHomes extends React.Component {
   render() {
     return (
       <div className="module">
+        <div className="moduleTitle">
+          <span>More homes you may like</span>
+        </div>
         <ListOfHomes data={this.state.data} />
       </div>
     )
