@@ -7,11 +7,21 @@ class MoreHomes extends React.Component {
     super(props);
 
     this.state = {
+      height: window.innerHeight,
+      width: window.innerWidth,
       data: [],
-      roomId: 0
+      roomId: 0,
     }
 
     this.generateRandomRoomId = this.generateRandomRoomId.bind(this);
+    this.handleResize = this.handleResize.bind(this);
+  }
+
+  handleResize() {
+    this.setState({
+      height: window.innerHeight,
+      width: window.innerWidth
+    });
   }
 
   generateRandomRoomId() {
@@ -20,8 +30,9 @@ class MoreHomes extends React.Component {
     let key = Math.floor(Math.random() * (max - min + 1)) + min;
     this.setState({ roomId: key });
   }
-  
+
   componentDidMount(e) {
+    window.addEventListener("resize", this.handleResize);
     this.generateRandomRoomId();
     axios.get(`/MoreHomes?key=${this.state.roomId}`)
       .then((response) => {
@@ -38,9 +49,18 @@ class MoreHomes extends React.Component {
         <div className="moduleTitle">
           <span>More homes you may like</span>
         </div>
-        <ListOfHomes data={this.state.data} />
+        <ListOfHomes data={this.state.data}
+          beginIndex={this.state.imgBegin}
+          endIndex={this.state.imgEnd}
+          height={this.state.height}
+          width={this.state.width}
+        />
       </div>
     )
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.handleResize);
   }
 }
 
