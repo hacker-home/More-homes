@@ -1,11 +1,4 @@
-const mysql = require('mysql');
-const config = require('./config.js');
-
-const connection = mysql.createConnection(config);
-connection.connect();
-
-
-const getAll = (callback) => {
+const getAll = (connection, callback) => {
   const query = 'SELECT * FROM homes ORDER BY RAND() LIMIT 5';
   connection.query(query, (err, result) => {
     if (err) {
@@ -16,7 +9,7 @@ const getAll = (callback) => {
   });
 };
 
-const addHouse = (arr, callback) => {
+const addHouse = (connection, arr, callback) => {
   const query = 'INSERT INTO homes (img, house_type, location, description, cost_per_night, rating, votes) VALUES ?';
   connection.query(query, [arr], (err) => {
     if (err) {
