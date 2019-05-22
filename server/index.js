@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 app.use(express.static(`${__dirname}/../public/dist`));
 const url = '/MoreHomes';
 app.get(url, (req, res) => {
+  // console.log(req.query.key);
   db.getAll((err, data) => {
     if (err) {
       res.status(500).send();

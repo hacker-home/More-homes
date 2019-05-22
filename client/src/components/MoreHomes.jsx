@@ -10,10 +10,8 @@ class MoreHomes extends React.Component {
       height: window.innerHeight,
       width: window.innerWidth,
       data: [],
-      roomId: 0,
     }
 
-    this.generateRandomRoomId = this.generateRandomRoomId.bind(this);
     this.handleResize = this.handleResize.bind(this);
   }
 
@@ -24,23 +22,21 @@ class MoreHomes extends React.Component {
     });
   }
 
-  generateRandomRoomId() {
-    const min = Math.ceil(1);
-    const max = Math.floor(100);
-    let key = Math.floor(Math.random() * (max - min + 1)) + min;
-    this.setState({ roomId: key });
-  }
-
   componentDidMount(e) {
     window.addEventListener("resize", this.handleResize);
-    this.generateRandomRoomId();
-    axios.get(`/MoreHomes?key=${this.state.roomId}`)
+    const search = window.location.search;
+    const params = new URLSearchParams(search);
+    axios.get(`/MoreHomes?key=${params.get('roomId')}`)
       .then((response) => {
         this.setState({ data: response.data })
       })
       .catch((error) => {
         console.log(error)
       });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.handleResize);
   }
 
   render() {
@@ -57,10 +53,6 @@ class MoreHomes extends React.Component {
         />
       </div>
     )
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.handleResize);
   }
 }
 

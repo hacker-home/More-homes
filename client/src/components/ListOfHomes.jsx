@@ -41,7 +41,7 @@ export default class ListOfHomes extends React.Component {
   render() {
     const endIndex = this.state.beginIndex + this.numberOfImages();
     const leftVisible = this.state.beginIndex > 0 ? 'visible' : 'hidden';
-    const rightVisible = this.state.endIndex < this.props.data.length ? 'visible' : 'hidden';
+    const rightVisible = endIndex < this.props.data.length ? 'visible' : 'hidden';
     return (
       <div>
         <div className="scrolls">
