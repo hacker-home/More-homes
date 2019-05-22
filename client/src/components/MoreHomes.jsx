@@ -46,8 +46,6 @@ class MoreHomes extends React.Component {
           <span>More homes you may like</span>
         </div>
         <ListOfHomes data={this.state.data}
-          beginIndex={this.state.imgBegin}
-          endIndex={this.state.imgEnd}
           height={this.state.height}
           width={this.state.width}
         />

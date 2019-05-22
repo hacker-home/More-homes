@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render ListEntry correctly 1`] = `
+<div
+  className="individualPic"
+>
+  <img
+    className="img"
+    src="path.jpg"
+  />
+  <p
+    className="location"
+  >
+    house
+     · 
+    Berlin
+  </p>
+  <p
+    className="description"
+  >
+    sunny
+  </p>
+  <p
+    className="price"
+  >
+    $
+    250
+     per night
+  </p>
+  <div
+    className="starsOuter"
+  >
+    <div
+      className="starsInner"
+      style={
+        Object {
+          "width": "24%",
+        }
+      }
+    />
+  </div>
+  <span
+    className="votes"
+  >
+    4
+  </span>
+</div>
+`;
+
+exports[`render ListOfHomes correctly 1`] = `
+<div>
+  <div
+    className="scrolls"
+  >
+    <button
+      className="leftScroll"
+      onClick={[Function]}
+      style={
+        Object {
+          "visibility": "hidden",
+        }
+      }
+    >
+      &lt;
+    </button>
+  </div>
+  <div
+    className="flex-container"
+  >
+    <div
+      className="individualPic"
+    >
+      <img
+        className="img"
+        src="path.jpg"
+      />
+      <p
+        className="location"
+      >
+        house
+         · 
+        Berlin
+      </p>
+      <p
+        className="description"
+      >
+        sunny
+      </p>
+      <p
+        className="price"
+      >
+        $
+        250
+         per night
+      </p>
+      <div
+        className="starsOuter"
+      >
+        <div
+          className="starsInner"
+          style={
+            Object {
+              "width": "24%",
+            }
+          }
+        />
+      </div>
+      <span
+        className="votes"
+      >
+        4
+      </span>
+    </div>
+    <button
+      className="rightScroll"
+      onClick={[Function]}
+      style={
+        Object {
+          "visibility": "hidden",
+        }
+      }
+    >
+      &gt;
+    </button>
+  </div>
+</div>
+`;
+
+exports[`render StarRating correctly 1`] = `
+<div
+  className="starsOuter"
+>
+  <div
+    className="starsInner"
+    style={
+      Object {
+        "width": "24%",
+      }
+    }
+  />
+</div>
+`;
