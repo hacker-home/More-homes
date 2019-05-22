@@ -17,6 +17,9 @@ function create() {
       (Math.random() * (5 - 0) + 0).toFixed(2),
       faker.random.number({ min: 0, max: 3500 }),
     ];
+    if (obj[5] === 0) {
+      obj[6] = 0;
+    }
     result.push(obj);
   }
   return result;
