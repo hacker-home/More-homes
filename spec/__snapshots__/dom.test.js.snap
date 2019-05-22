@@ -6,7 +6,7 @@ exports[`render ListEntry correctly 1`] = `
 >
   <img
     className="img"
-    src="path.jpg"
+    src="path0.jpg"
   />
   <p
     className="location"
@@ -18,7 +18,7 @@ exports[`render ListEntry correctly 1`] = `
   <p
     className="description"
   >
-    sunny
+    sunny0
   </p>
   <p
     className="price"
@@ -34,7 +34,7 @@ exports[`render ListEntry correctly 1`] = `
       className="starsInner"
       style={
         Object {
-          "width": "24%",
+          "width": "22%",
         }
       }
     />
@@ -72,7 +72,7 @@ exports[`render ListOfHomes correctly 1`] = `
     >
       <img
         className="img"
-        src="path.jpg"
+        src="path0.jpg"
       />
       <p
         className="location"
@@ -84,7 +84,7 @@ exports[`render ListOfHomes correctly 1`] = `
       <p
         className="description"
       >
-        sunny
+        sunny0
       </p>
       <p
         className="price"
@@ -100,7 +100,51 @@ exports[`render ListOfHomes correctly 1`] = `
           className="starsInner"
           style={
             Object {
-              "width": "24%",
+              "width": "22%",
+            }
+          }
+        />
+      </div>
+      <span
+        className="votes"
+      >
+        4
+      </span>
+    </div>
+    <div
+      className="individualPic"
+    >
+      <img
+        className="img"
+        src="path1.jpg"
+      />
+      <p
+        className="location"
+      >
+        house
+         · 
+        Berlin
+      </p>
+      <p
+        className="description"
+      >
+        sunny1
+      </p>
+      <p
+        className="price"
+      >
+        $
+        251
+         per night
+      </p>
+      <div
+        className="starsOuter"
+      >
+        <div
+          className="starsInner"
+          style={
+            Object {
+              "width": "32%",
             }
           }
         />
@@ -116,7 +160,7 @@ exports[`render ListOfHomes correctly 1`] = `
       onClick={[Function]}
       style={
         Object {
-          "visibility": "hidden",
+          "visibility": "visible",
         }
       }
     >
@@ -134,7 +178,7 @@ exports[`render StarRating correctly 1`] = `
     className="starsInner"
     style={
       Object {
-        "width": "24%",
+        "width": "22%",
       }
     }
   />
