@@ -31,6 +31,7 @@
     "babel-jest": "^24.7.1",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-export-extensions": "^6.22.0",
+    "chai-enzyme": "^1.0.0-beta.1",
     "css-loader": "^1.0.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.1",

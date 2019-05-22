@@ -24,7 +24,7 @@ const testEntries = (() => {
   return arr;
 })();
 
-
+// snapshot
 it('render ListEntry correctly', () => {
   const tree = renderer
     .create(<ListEntry entry={testEntries[0]} key={testEntries.id} />)
@@ -46,7 +46,26 @@ it('render ListOfHomes correctly', () => {
   expect(tree).toMatchSnapshot();
 });
 
+// jest-enzyme
 test('component of ListEntry', () => {
   const entry = shallow(<ListEntry entry={testEntries[1]} key={testEntries[1].id} />);
   expect(entry.text()).not.toBeNull();
+});
+
+test('simulate button click', () => {
+  const wrapper = shallow(<ListOfHomes data={testEntries} height={720} width={1150} />);
+  expect(wrapper.find('ListEntry').first().html()).toMatchSnapshot();
+  wrapper.find('button.rightScroll').simulate('click');
+  expect(wrapper.find('ListEntry').first().html()).toMatchSnapshot();
+  wrapper.find('button.leftScroll').simulate('click');
+  expect(wrapper.find('ListEntry').first().html()).toMatchSnapshot();
+});
+
+test('number of rendered items', () => {
+  let wrapper = shallow(<ListOfHomes data={testEntries} height={720} width={1340} />);
+  expect(wrapper.find(ListEntry).last().key()).toEqual("2");
+  wrapper = shallow(<ListOfHomes data={testEntries} height={720} width={1000} />);
+  expect(wrapper.find(ListEntry).last().key()).toEqual("1");
+  wrapper = shallow(<ListOfHomes data={testEntries} height={720} width={550} />);
+  expect(wrapper.find(ListEntry).last().key()).toEqual("0");
 });
