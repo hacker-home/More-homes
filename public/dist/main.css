@@ -112,14 +112,6 @@
   white-space: normal;
 }
 
-/* .scrolls {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  display: block;
-  z-index: 1;
-} */
-
 .leftScroll {
   margin-left: 12%;
   height: 250px;
