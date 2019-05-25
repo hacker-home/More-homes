@@ -43,14 +43,10 @@ export default class ListOfHomes extends React.Component {
     const leftVisible = this.state.beginIndex > 0 ? 'visible' : 'hidden';
     const rightVisible = endIndex < this.props.data.length ? 'visible' : 'hidden';
     return (
-      <div>
-        <div className="scrolls">
-          <button className="leftScroll" onClick={this.handleLeftClick} style={{ visibility: leftVisible }}>&lt;</button>
-        </div>
-        <div className="flex-container">
-          {this.props.data.slice(this.state.beginIndex, endIndex).map((entry) => <ListEntry entry={entry} key={entry.id} />)}
-          <button className="rightScroll" onClick={this.handleRightClick} style={{ visibility: rightVisible }}>&gt;</button>
-        </div>
+      <div className="flex-container">
+        <button className="leftScroll" onClick={this.handleLeftClick} style={{ visibility: leftVisible }}>&lt;</button>
+        {this.props.data.slice(this.state.beginIndex, endIndex).map((entry) => <ListEntry entry={entry} key={entry.id} />)}
+        <button className="rightScroll" onClick={this.handleRightClick} style={{ visibility: rightVisible }}>&gt;</button>
       </div>
     )
   }
