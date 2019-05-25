@@ -1,7 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const db = require('../db/index.js');
+const dbConnection = require('../db/conn.js');
 const dataArr = require('./createData.js');
+const dbModels = require('../db/models.js');
 
 const app = express();
 const port = 8080;
@@ -9,9 +10,11 @@ const port = 8080;
 app.use(bodyParser.json());
 app.use(express.static(`${__dirname}/../public/dist`));
 const url = '/MoreHomes';
+dbConnection.connect();
+
 app.get(url, (req, res) => {
   // console.log(req.query.key);
-  db.getAll((err, data) => {
+  dbModels.getAll(dbConnection, (err, data) => {
     if (err) {
       res.status(500).send();
     } else {
@@ -19,9 +22,10 @@ app.get(url, (req, res) => {
     }
   });
 });
+
 app.post('/MoreHomes', (req, res) => {
   const data = dataArr.create();
-  db.addHouse(data, (err, result) => {
+  dbModels.addHouse(dbConnection, data, (err, result) => {
     if (err) {
       res.status(500).send();
     } else {
