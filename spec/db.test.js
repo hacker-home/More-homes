@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 const dbModels = require('../db/models.js');
 
-const mockConnection = jest.genMockFromModule('../db/conn.js');
+const mockConnection = {}; // jest.genMockFromModule('../db/conn.js');
 
 test('mock connection', () => {
   mockConnection.query = (query, callback) => {
