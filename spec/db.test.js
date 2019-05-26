@@ -1,25 +1,7 @@
 /* eslint-disable no-undef */
-const dbConnection = require('../db/conn.js');
 const dbModels = require('../db/models.js');
 
-const mockConnection = jest.genMockFromModule('../db/conn.js');
-
-beforeAll(() => {
-  dbConnection.connect();
-});
-
-afterAll(() => {
-  dbConnection.end();
-});
-
-test('length of data', () => {
-  function callback(err, data) {
-    expect(err).toBe(null);
-    expect(data.length).toBe(5);
-  }
-
-  dbModels.getAll(dbConnection, callback);
-});
+const mockConnection = {}; // jest.genMockFromModule('../db/conn.js');
 
 test('mock connection', () => {
   mockConnection.query = (query, callback) => {
