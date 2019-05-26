@@ -1,75 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`render ListEntry correctly 1`] = `
-<div
+<a
   className="individualPic"
+  href="/MoreHomes?key=0"
 >
-  <img
-    className="img"
-    src="path0.jpg"
-  />
-  <p
-    className="location"
-  >
-    house
-     · 
-    Berlin
-  </p>
-  <p
-    className="description"
-  >
-    sunny0
-  </p>
-  <p
-    className="price"
-  >
-    $
-    250
-     per night
-  </p>
-  <div
-    className="starsOuter"
-  >
-    <div
-      className="starsInner"
-      style={
-        Object {
-          "width": "22%",
-        }
-      }
+  <div>
+    <img
+      className="img"
+      src="path0.jpg"
     />
+    <p
+      className="location"
+    >
+      house
+       · 
+      Berlin
+    </p>
+    <p
+      className="description"
+    >
+      sunny0
+    </p>
+    <p
+      className="price"
+    >
+      $
+      250
+       per night
+    </p>
+    <div
+      className="starsOuter"
+    >
+      <div
+        className="starsInner"
+        style={
+          Object {
+            "width": "22%",
+          }
+        }
+      />
+    </div>
+    <span
+      className="votes"
+    >
+      4
+    </span>
   </div>
-  <span
-    className="votes"
-  >
-    4
-  </span>
-</div>
+</a>
 `;
 
 exports[`render ListOfHomes correctly 1`] = `
-<div>
-  <div
-    className="scrolls"
-  >
-    <button
-      className="leftScroll"
-      onClick={[Function]}
-      style={
-        Object {
-          "visibility": "hidden",
-        }
+<div
+  className="flex-container"
+>
+  <button
+    className="leftScroll"
+    onClick={[Function]}
+    style={
+      Object {
+        "visibility": "hidden",
       }
-    >
-      &lt;
-    </button>
-  </div>
-  <div
-    className="flex-container"
+    }
   >
-    <div
-      className="individualPic"
-    >
+    &lt;
+  </button>
+  <a
+    className="individualPic"
+    href="/MoreHomes?key=0"
+  >
+    <div>
       <img
         className="img"
         src="path0.jpg"
@@ -111,9 +111,12 @@ exports[`render ListOfHomes correctly 1`] = `
         4
       </span>
     </div>
-    <div
-      className="individualPic"
-    >
+  </a>
+  <a
+    className="individualPic"
+    href="/MoreHomes?key=1"
+  >
+    <div>
       <img
         className="img"
         src="path1.jpg"
@@ -155,18 +158,18 @@ exports[`render ListOfHomes correctly 1`] = `
         4
       </span>
     </div>
-    <button
-      className="rightScroll"
-      onClick={[Function]}
-      style={
-        Object {
-          "visibility": "visible",
-        }
+  </a>
+  <button
+    className="rightScroll"
+    onClick={[Function]}
+    style={
+      Object {
+        "visibility": "visible",
       }
-    >
-      &gt;
-    </button>
-  </div>
+    }
+  >
+    &gt;
+  </button>
 </div>
 `;
 
@@ -185,8 +188,8 @@ exports[`render StarRating correctly 1`] = `
 </div>
 `;
 
-exports[`simulate button click 1`] = `"<div class=\\"individualPic\\"><img class=\\"img\\" src=\\"path0.jpg\\"/><p class=\\"location\\">house · Berlin</p><p class=\\"description\\">sunny0</p><p class=\\"price\\">$250 per night</p><div class=\\"starsOuter\\"><div class=\\"starsInner\\" style=\\"width:22%\\"></div></div><span class=\\"votes\\">4</span></div>"`;
+exports[`simulate button click 1`] = `"<a href=\\"/MoreHomes?key=0\\" class=\\"individualPic\\"><div><img class=\\"img\\" src=\\"path0.jpg\\"/><p class=\\"location\\">house · Berlin</p><p class=\\"description\\">sunny0</p><p class=\\"price\\">$250 per night</p><div class=\\"starsOuter\\"><div class=\\"starsInner\\" style=\\"width:22%\\"></div></div><span class=\\"votes\\">4</span></div></a>"`;
 
-exports[`simulate button click 2`] = `"<div class=\\"individualPic\\"><img class=\\"img\\" src=\\"path1.jpg\\"/><p class=\\"location\\">house · Berlin</p><p class=\\"description\\">sunny1</p><p class=\\"price\\">$251 per night</p><div class=\\"starsOuter\\"><div class=\\"starsInner\\" style=\\"width:32%\\"></div></div><span class=\\"votes\\">4</span></div>"`;
+exports[`simulate button click 2`] = `"<a href=\\"/MoreHomes?key=1\\" class=\\"individualPic\\"><div><img class=\\"img\\" src=\\"path1.jpg\\"/><p class=\\"location\\">house · Berlin</p><p class=\\"description\\">sunny1</p><p class=\\"price\\">$251 per night</p><div class=\\"starsOuter\\"><div class=\\"starsInner\\" style=\\"width:32%\\"></div></div><span class=\\"votes\\">4</span></div></a>"`;
 
-exports[`simulate button click 3`] = `"<div class=\\"individualPic\\"><img class=\\"img\\" src=\\"path0.jpg\\"/><p class=\\"location\\">house · Berlin</p><p class=\\"description\\">sunny0</p><p class=\\"price\\">$250 per night</p><div class=\\"starsOuter\\"><div class=\\"starsInner\\" style=\\"width:22%\\"></div></div><span class=\\"votes\\">4</span></div>"`;
+exports[`simulate button click 3`] = `"<a href=\\"/MoreHomes?key=0\\" class=\\"individualPic\\"><div><img class=\\"img\\" src=\\"path0.jpg\\"/><p class=\\"location\\">house · Berlin</p><p class=\\"description\\">sunny0</p><p class=\\"price\\">$250 per night</p><div class=\\"starsOuter\\"><div class=\\"starsInner\\" style=\\"width:22%\\"></div></div><span class=\\"votes\\">4</span></div></a>"`;
