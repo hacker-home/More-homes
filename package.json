@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/index.js",
+    "start": "nodemon server/server.js",
     "react-dev": "webpack -d --watch",
     "test": "jest --detectOpenHandles --coverage",
     "updateTestSnapshot": "jest --updateSnapshot"
@@ -48,6 +48,7 @@
     "husky": "^2.3.0",
     "jest": "^24.7.1",
     "jest-enzyme": "^7.0.2",
+    "jest-express": "^1.10.1",
     "prettier": "1.16.4",
     "react-test-renderer": "16.8.6",
     "sinon": "^7.3.1",

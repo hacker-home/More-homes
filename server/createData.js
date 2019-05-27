@@ -2,6 +2,8 @@
 const faker = require('faker');
 // const img = require('../images.js');
 const img = require('./localimg.js');
+const dbModels = require('../db/models.js');
+const dbConnection = require('../db/conn.js');
 
 function create() {
   const result = [];
@@ -25,6 +27,12 @@ function create() {
   return result;
 }
 
-module.exports = {
-  create,
-};
+const data = create();
+dbModels.addHouse(dbConnection, data, (err) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log('Data created');
+  }
+  dbConnection.end();
+});

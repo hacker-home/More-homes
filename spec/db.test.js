@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 const dbModels = require('../db/models.js');
 
-const mockConnection = {}; // jest.genMockFromModule('../db/conn.js');
+const mockConnection = {};
 
 test('mock connection', () => {
   mockConnection.query = (query, callback) => {
@@ -25,10 +25,9 @@ test('mock addHouse', () => {
   mockConnection.query = (query, [arr], callback) => {
     expect(query).toBe('INSERT INTO homes (img, house_type, location, description, cost_per_night, rating, votes) VALUES ?');
     expect(arr).toStrictEqual([['path.jpg', 'house', 'Berlin', 'sunny house', 245, 4.5, 177]]);
-    callback(null, null);
+    callback(null);
   };
   dbModels.addHouse(mockConnection, [['path.jpg', 'house', 'Berlin', 'sunny house', 245, 4.5, 177]], (err, data) => {
     expect(err).toBe(null);
-    expect(data).toBe(null);
   });
 });
