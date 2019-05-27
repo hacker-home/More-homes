@@ -1,5 +1,5 @@
 const getAll = (connection, callback) => {
-  const query = 'SELECT * FROM homes ORDER BY RAND() LIMIT 5';
+  const query = 'SELECT * FROM homes ORDER BY RAND() LIMIT 12';
   connection.query(query, (err, result) => {
     if (err) {
       callback(err);
