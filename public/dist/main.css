@@ -122,6 +122,7 @@
 }
 
 .leftScroll:hover {
+  outline: 0;
   border: transparent;
 }
 
@@ -133,5 +134,6 @@
 }
 
 .rightScroll:hover {
+  outline: 0;
   border: transparent;
 }
