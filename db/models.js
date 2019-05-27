@@ -15,7 +15,7 @@ const addHouse = (connection, arr, callback) => {
     if (err) {
       callback(err);
     } else {
-      callback(null, null);
+      callback(null);
     }
   });
 };
