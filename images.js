@@ -11,7 +11,20 @@ module.exports = {
       'https://s3-us-west-1.amazonaws.com/homes-pic/8.jpg',
       'https://s3-us-west-1.amazonaws.com/homes-pic/9.jpg',
       'https://s3-us-west-1.amazonaws.com/homes-pic/10.jpg',
-      'https://s3-us-west-1.amazonaws.com/homes-pic/11.jpg'];
+      'https://s3-us-west-1.amazonaws.com/homes-pic/11.jpg',
+      'https://s3-us-west-1.amazonaws.com/homes-pic/12.jpg',
+      'https://s3-us-west-1.amazonaws.com/homes-pic/13.jpg',
+      'https://s3-us-west-1.amazonaws.com/homes-pic/14.jpg',
+      'https://s3-us-west-1.amazonaws.com/homes-pic/15.jpg',
+      'https://s3-us-west-1.amazonaws.com/homes-pic/16.jpg',
+      'https://s3-us-west-1.amazonaws.com/homes-pic/17.jpg',
+      'https://s3-us-west-1.amazonaws.com/homes-pic/18.jpg',
+      'https://s3-us-west-1.amazonaws.com/homes-pic/19.jpg',
+      'https://s3-us-west-1.amazonaws.com/homes-pic/20.jpg',
+      'https://s3-us-west-1.amazonaws.com/homes-pic/21.jpg',
+      'https://s3-us-west-1.amazonaws.com/homes-pic/22.jpg',
+      'https://s3-us-west-1.amazonaws.com/homes-pic/23.jpg',
+      'https://s3-us-west-1.amazonaws.com/homes-pic/24.jpg'];
     return arr[Math.floor(Math.random() * arr.length)];
   },
 };
