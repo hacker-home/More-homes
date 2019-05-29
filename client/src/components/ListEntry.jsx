@@ -8,7 +8,7 @@ export default class ListEntry extends React.Component {
   
   render() {
     return (
-      <a href={`/MoreHomes?key=${this.props.entry.id}`} className="individualPic">
+      <a href={`/?id=${this.props.entry.id}`} className="individualPic">
         <div>
           <img className="img" src={this.props.entry.img}/>
           <p className="location">{this.props.entry.house_type} · {this.props.entry.location}</p>
