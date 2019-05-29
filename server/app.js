@@ -11,7 +11,6 @@ const createApp = (dbConnection) => {
   app.use(express.static(`${__dirname}/../public/dist`));
 
   app.get(url, (req, res) => {
-    // console.log(req.query.key);
     dbModels.getAll(dbConnection, (err, data) => {
       if (err) {
         res.status(500).send();
