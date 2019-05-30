@@ -3,7 +3,7 @@
 exports[`render ListEntry correctly 1`] = `
 <a
   className="individualPic"
-  href="/MoreHomes?key=0"
+  href="/?id=0"
 >
   <div>
     <img
@@ -67,7 +67,7 @@ exports[`render ListOfHomes correctly 1`] = `
   </button>
   <a
     className="individualPic"
-    href="/MoreHomes?key=0"
+    href="/?id=0"
   >
     <div>
       <img
@@ -114,7 +114,7 @@ exports[`render ListOfHomes correctly 1`] = `
   </a>
   <a
     className="individualPic"
-    href="/MoreHomes?key=1"
+    href="/?id=1"
   >
     <div>
       <img
@@ -188,8 +188,8 @@ exports[`render StarRating correctly 1`] = `
 </div>
 `;
 
-exports[`simulate button click 1`] = `"<a href=\\"/MoreHomes?key=0\\" class=\\"individualPic\\"><div><img class=\\"img\\" src=\\"path0.jpg\\"/><p class=\\"location\\">house · Berlin</p><p class=\\"description\\">sunny0</p><p class=\\"price\\">$250 per night</p><div class=\\"starsOuter\\"><div class=\\"starsInner\\" style=\\"width:22%\\"></div></div><span class=\\"votes\\">4</span></div></a>"`;
+exports[`simulate button click 1`] = `"<a href=\\"/?id=0\\" class=\\"individualPic\\"><div><img class=\\"img\\" src=\\"path0.jpg\\"/><p class=\\"location\\">house · Berlin</p><p class=\\"description\\">sunny0</p><p class=\\"price\\">$250 per night</p><div class=\\"starsOuter\\"><div class=\\"starsInner\\" style=\\"width:22%\\"></div></div><span class=\\"votes\\">4</span></div></a>"`;
 
-exports[`simulate button click 2`] = `"<a href=\\"/MoreHomes?key=1\\" class=\\"individualPic\\"><div><img class=\\"img\\" src=\\"path1.jpg\\"/><p class=\\"location\\">house · Berlin</p><p class=\\"description\\">sunny1</p><p class=\\"price\\">$251 per night</p><div class=\\"starsOuter\\"><div class=\\"starsInner\\" style=\\"width:32%\\"></div></div><span class=\\"votes\\">4</span></div></a>"`;
+exports[`simulate button click 2`] = `"<a href=\\"/?id=1\\" class=\\"individualPic\\"><div><img class=\\"img\\" src=\\"path1.jpg\\"/><p class=\\"location\\">house · Berlin</p><p class=\\"description\\">sunny1</p><p class=\\"price\\">$251 per night</p><div class=\\"starsOuter\\"><div class=\\"starsInner\\" style=\\"width:32%\\"></div></div><span class=\\"votes\\">4</span></div></a>"`;
 
-exports[`simulate button click 3`] = `"<a href=\\"/MoreHomes?key=0\\" class=\\"individualPic\\"><div><img class=\\"img\\" src=\\"path0.jpg\\"/><p class=\\"location\\">house · Berlin</p><p class=\\"description\\">sunny0</p><p class=\\"price\\">$250 per night</p><div class=\\"starsOuter\\"><div class=\\"starsInner\\" style=\\"width:22%\\"></div></div><span class=\\"votes\\">4</span></div></a>"`;
+exports[`simulate button click 3`] = `"<a href=\\"/?id=0\\" class=\\"individualPic\\"><div><img class=\\"img\\" src=\\"path0.jpg\\"/><p class=\\"location\\">house · Berlin</p><p class=\\"description\\">sunny0</p><p class=\\"price\\">$250 per night</p><div class=\\"starsOuter\\"><div class=\\"starsInner\\" style=\\"width:22%\\"></div></div><span class=\\"votes\\">4</span></div></a>"`;

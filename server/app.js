@@ -8,7 +8,7 @@ const createApp = (dbConnection) => {
   app.use(bodyParser.json());
   app.use(express.static(`${__dirname}/../public/dist`));
 
-  app.get('/MoreHomes/:listingID', (req, res) => {
+  app.get('/MoreHomes', (req, res) => {
     dbModels.getAll(dbConnection, (err, data) => {
       if (err) {
         res.status(500).send();
