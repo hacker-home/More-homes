@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 const faker = require('faker');
-const img = require('../images.js');
+const img = require('./images.js');
 // const img = require('./localimg.js');
 const dbModels = require('../db/models.js');
 const dbConnection = require('../db/conn.js');
