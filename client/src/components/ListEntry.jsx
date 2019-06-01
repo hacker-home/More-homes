@@ -1,7 +1,7 @@
 import React from 'react';
 import StarRating from './StarRating';
 
-export default  ListEntry = props => (
+const ListEntry = props => (
   <a href={`/?id=${props.entry.id}`} className="individualPic">
     <div>
       <img className="img" src={props.entry.img}/>
@@ -13,3 +13,5 @@ export default  ListEntry = props => (
     </div>
   </a>
 );
+
+export default ListEntry;
